@@ -4,6 +4,8 @@ const orderList = document.getElementById('order-list')
 const orderSection = document.getElementById('order-section')
 const foodItems = document.getElementById('food-items')
 const totalPrice = document.getElementById('total-price')
+const checkoutModal = document.getElementById('checkout-modal')
+const paymentForm = document.getElementById('payment-form')
 
 let orderArray = []
 let total = 0
@@ -24,6 +26,19 @@ document.addEventListener('click', function(e){
         }
         renderOrder()
     }
+    else if (e.target.id === 'complete-order-btn'){
+        checkoutModal.style.display = "flex"
+    }
+})
+
+paymentForm.addEventListener('submit', function(e){
+    e.preventDefault()
+    const name = new FormData(paymentForm).get('name')
+
+    checkoutModal.style.display = "none"
+    orderSection.innerHTML = `
+        <p id="order-complete-msg">Thanks, ${name}! Your order is on its way!</p>
+    `
 })
 
 function renderMenu(menuArray){

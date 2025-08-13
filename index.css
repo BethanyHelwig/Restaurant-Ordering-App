@@ -113,7 +113,8 @@ ul {
 }
 
 #checkout-modal {
-    /* display: none; */
+    display: none;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
@@ -121,11 +122,15 @@ ul {
     right: 0;
     margin: auto;
     width: 500px;
-    height: 500px;
+    height: 400px;
     padding: 16px;
     background-color: white;
-    box-shadow: 0 0 50px black;
+    box-shadow: 0 0 100px #636363;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#checkout-modal h2 {
+    margin: 25px auto 35px auto;
 }
 
 form {
@@ -137,6 +142,19 @@ form {
 
 input {
     padding: 10px;
+}
+
+input[type="text"]::placeholder {
+    color: #757575;
+}
+
+#order-complete-msg {
+    margin-top: 25px;
+    padding: 25px 35px;
+    background-color: #ECFDF5;
+    color: #065F46;
+    font-size: 26px;
+    text-align: center;
 }
 
 /* TYPOGRAPHY */

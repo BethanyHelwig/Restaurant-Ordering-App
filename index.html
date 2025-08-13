@@ -21,6 +21,7 @@
                     <!-- Added in from script-->
                 </ul>
             </section>
+
             <section id="order-section">
                 <h2 id="order-header">Your order</h2>
                 <ul id="order-list">
@@ -36,26 +37,26 @@
 
         <section id="checkout-modal">
             <h2>Enter card details</h2>
-            <form name="payment-form">
+            <form id="payment-form" name="payment-form">
                 <input 
                     type="text" 
                     placeholder="Enter your name" 
-                    name="payment-form" 
-                    pattern="[a-zA-Z]"
+                    name="name" 
+                    pattern="[a-zA-Z]+"
                     required>
                 <input 
                     type="text" 
                     placeholder="Enter your card number" 
-                    name="payment-form" 
-                    pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"
+                    name="cardNumber" 
+                    pattern="[0-9]{16}"
                     required>
                 <input 
                     type="text" 
                     placeholder="Enter CVV" 
-                    name="payment-form" 
+                    name="cardCVV" 
                     pattern="[0-9]{3}"
                     required>
-                <button type="submit" class="submit-btn" onclick="">Pay</button>
+                <button type="submit" class="submit-btn">Pay</button>
             </form>
         </section>
     </body>
