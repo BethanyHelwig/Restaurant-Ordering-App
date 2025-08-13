@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js" type="module"></script>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1>Java Jitters</h1>
+            <h3>The best coffee and sandwiches in town.</h3>
+        </header>
+
+        <main>
+            <section>
+                <ul id="food-items">
+                    <!-- Added in from script-->
+                </ul>
+            </section>
+            <section id="order-section">
+                <h2 id="order-header">Your order</h2>
+                <ul id="order-list">
+                    <!-- Added in from script -->
+                </ul>
+                <div class="order-item">
+                    <h2>Total price:</h2>
+                    <p id="total-price"></p>
+                </div>
+                <button id="complete-order-btn" class="submit-btn">Complete order</button>
+            </section>
+        </main>
+
+        <section id="checkout-modal">
+            <h2>Enter card details</h2>
+            <form name="payment-form">
+                <input 
+                    type="text" 
+                    placeholder="Enter your name" 
+                    name="payment-form" 
+                    pattern="[a-zA-Z]"
+                    required>
+                <input 
+                    type="text" 
+                    placeholder="Enter your card number" 
+                    name="payment-form" 
+                    pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"
+                    required>
+                <input 
+                    type="text" 
+                    placeholder="Enter CVV" 
+                    name="payment-form" 
+                    pattern="[0-9]{3}"
+                    required>
+                <button type="submit" class="submit-btn" onclick="">Pay</button>
+            </form>
+        </section>
+    </body>
+</html>
